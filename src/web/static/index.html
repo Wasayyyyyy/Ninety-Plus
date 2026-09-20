@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NINETY+ | Elite Premier League Football Intelligence</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="top-navbar">
+    <div class="brand-section" onclick="switchView('home')">
+      <div class="brand-logo-icon">&#9917;</div>
+      <div class="brand-title">NINETY<span>+</span></div>
+    </div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><button class="nav-btn active" data-view="home">HOME</button></li>
+        <li><button class="nav-btn" data-view="match">MATCH PREDICTOR</button></li>
+        <li><button class="nav-btn" data-view="transfer">TRANSFER VALUE</button></li>
+        <li><button class="nav-btn" data-view="scouting">PLAYER SCOUTING</button></li>
+        <li><button class="nav-btn" data-view="methodology">DATA & METHODOLOGY</button></li>
+      </ul>
+    </nav>
+
+    <div class="nav-right-tools">
+      <div class="season-pill">
+        <span class="dot-indicator"></span>
+        <span>2024/25</span>
+      </div>
+      <button class="search-shortcut-btn" id="searchShortcutBtn">
+        <span>&#128269;</span>
+        <span>Cmd+K</span>
+      </button>
+      <button class="user-avatar-btn" title="Football Intelligence Director">&#128100;</button>
+    </div>
+  </header>
+
+  <!-- Live Sub-header Ticker -->
+  <div class="live-ticker-bar">
+    <div class="ticker-left">
+      <span class="ticker-item live"><span class="dot-indicator"></span> MW 29 PREDICTIONS LIVE</span>
+      <span>|</span>
+      <span class="ticker-item">&#9881; Transfer Engine v2.4 Active</span>
+      <span>|</span>
+      <span class="ticker-item">&#10227; Opta Sync: 4m ago</span>
+    </div>
+    <div class="ticker-right">
+      <span id="modelConfText">MODEL CONFIDENCE INDEX: <span class="conf-val">94.2%</span></span>
+    </div>
+  </div>
+
+  <!-- Main Viewport Containers -->
+  <main class="main-viewport">
+
+    <!-- ====================================================================
+         VIEW 1: HOME
+         ==================================================================== -->
+    <div id="view-home" class="app-view active">
+      
+      <!-- Hero Section -->
+      <section class="hero-container">
+        <div class="hero-left-content">
+          <div class="hero-subtag">&#9679; PREMIER LEAGUE ML INTELLIGENCE &bull; 2024/25</div>
+          <h1 class="hero-main-title">THE PREMIER LEAGUE, THROUGH DATA.</h1>
+          <p class="hero-desc">
+            Advanced machine learning models engineered to quantify match probabilities, player valuation trajectories, and tactical scouting profiles across 380 fixtures.
+          </p>
+
+          <div class="hero-cta-group">
+            <button class="btn-primary-gradient" onclick="switchView('match')">
+              Explore Predictions &rarr;
+            </button>
+            <button class="btn-secondary-outline" onclick="switchView('scouting')">
+              &#127919; Scout Players
+            </button>
+            <div class="accuracy-badge">
+              &#9889; 84.2% VALIDATION ACCURACY
+            </div>
+          </div>
+
+          <div class="hero-stat-row">
+            <div class="stat-item">
+              <div class="stat-num">120+</div>
+              <div class="stat-lbl">ENGINEERED FEATURES</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num neon">0.142</div>
+              <div class="stat-lbl">BRIER CALIBRATION SCORE</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">580k</div>
+              <div class="stat-lbl">HISTORICAL SEQUENCES</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Pitch Card -->
+        <div class="hero-pitch-card">
+          <div class="pitch-card-header">
+            <span style="color: var(--accent-neon-green);">&#9679; MW 29 &bull; LIVE MODEL INFERENCE</span>
+            <span style="color: #7b758c;">OPTA SYNCHRONIZED</span>
+          </div>
+
+          <div class="pitch-canvas-wrapper">
+            <div style="text-align: center; color: #fff; z-index: 2;">
+              <div style="font-size: 36px; font-weight: 900; letter-spacing: -1px;">Spatial Breakdown</div>
+              <div style="font-size: 13px; color: var(--accent-neon-green); font-weight: 800; margin-top: 6px;">
+                Field Tilt &amp; High Turnovers &bull; +18.4% xT Swing
+              </div>
+            </div>
+          </div>
+
+          <div class="pitch-overlay-info">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="font-size: 20px;">&#128202;</span>
+              <div>
+                <div style="font-size: 10px; color: #7b758c; font-weight: 800;">LIVE MONTE CARLO</div>
+                <div style="font-size: 13px; font-weight: 900;">10,000x Runs Logged</div>
+              </div>
+            </div>
+            <button class="btn-secondary-outline" style="padding: 6px 14px; font-size: 12px;" onclick="switchView('match')">
+              Run Sim &rarr;
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core Machine Learning Engines -->
+      <section class="section-wrapper">
+        <div class="section-pretitle">ARCHITECTURE &amp; ALGORITHMS</div>
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px;">
+          <h2 class="section-title" style="margin-bottom: 0;">Core Machine Learning Engines</h2>
+          <div style="font-size: 13px; color: var(--text-muted-dark); max-width: 480px; text-align: right;">
+            Purpose-built predictive pipelines evaluating fixtures, balance sheets, and tactical silhouettes at sub-second latency.
+          </div>
+        </div>
+
+        <div class="pillars-grid">
+          <!-- Pillar 1 -->
+          <div class="pillar-card" onclick="switchView('match')">
+            <div>
+              <div class="pillar-top">
+                <div class="pillar-icon-box">&#9873;</div>
+                <div class="pillar-tag">PILLAR 01</div>
+              </div>
+              <div class="pillar-title">Match Outcome Predictor</div>
+              <div class="pillar-algo">XGBOOST &amp; CATBOOST ENSEMBLE &bull; 120+ PRE-MATCH VECTORS</div>
+              <div class="pillar-desc">
+                Multi-class classification calculating Win/Draw/Loss distribution using non-linear rolling xG, Elo adjustments, fatigue indexes, and tactical pressing rates.
+              </div>
+
+              <div class="pillar-metric-preview">
+                <div style="display: flex; justify-content: space-between; font-size: 12px; font-weight: 800; margin-bottom: 6px;">
+                  <span>ARS (68%)</span>
+                  <span>DRAW (20%)</span>
+                  <span>CHE (12%)</span>
+                </div>
+                <div style="height: 6px; background: #e0dced; border-radius: 3px; display: flex; overflow: hidden;">
+                  <div style="width: 68%; background: #220845;"></div>
+                  <div style="width: 20%; background: #b0a8c2;"></div>
+                  <div style="width: 12%; background: #ff2a85;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pillar-link">Open Match Simulator &rarr;</div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="pillar-card" onclick="switchView('transfer')">
+            <div>
+              <div class="pillar-top">
+                <div class="pillar-icon-box">&#128200;</div>
+                <div class="pillar-tag">PILLAR 02</div>
+              </div>
+              <div class="pillar-title">Transfer Value Estimator</div>
+              <div class="pillar-algo">REGULARIZED RIDGE &amp; RANDOM FOREST REGRESSOR</div>
+              <div class="pillar-desc">
+                Market equilibrium valuation derived from contract maturity, age curve trajectory, league coefficient multipliers, and progressive action efficiency.
+              </div>
+
+              <div class="pillar-metric-preview" style="background: #fdf2f7;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <div>
+                    <div style="font-size: 10px; color: #7b758c; font-weight: 800;">Target Valuation Delta</div>
+                    <div style="font-size: 24px; font-weight: 900; color: #110d1c;">&euro;64.5M</div>
+                  </div>
+                  <span style="background: #00ff85; color: #000; font-size: 11px; font-weight: 900; padding: 4px 10px; border-radius: 4px;">UNDERVALUED</span>
+                </div>
+              </div>
+            </div>
+            <div class="pillar-link">Analyze Valuations &rarr;</div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="pillar-card" onclick="switchView('scouting')">
+            <div>
+              <div class="pillar-top">
+                <div class="pillar-icon-box">&#10057;</div>
+                <div class="pillar-tag">PILLAR 03</div>
+              </div>
+              <div class="pillar-title">Player Scouting &amp; Clustering</div>
+              <div class="pillar-algo">MULTI-DIMENSIONAL K-MEANS &amp; COSINE SIMILARITY</div>
+              <div class="pillar-desc">
+                Unsupervised role fingerprinting projecting players onto dimensional vectors to surface high-affinity tactical replacements across Europe's top 5 leagues.
+              </div>
+
+              <div class="pillar-metric-preview" style="background: #f4effc;">
+                <div style="display: flex; align-items: center; gap: 14px;">
+                  <div style="font-size: 28px; color: var(--accent-purple);">&#11042;</div>
+                  <div>
+                    <div style="font-size: 20px; font-weight: 900; color: #110d1c;">94.8% Match</div>
+                    <div style="font-size: 11px; color: #7b758c; font-weight: 800;">PROFILE: DEEP-LYING PLAYMAKER</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pillar-link">Scout Profiles &rarr;</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Matchweek 29 Key Matchups -->
+      <section class="section-wrapper">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+          <div>
+            <div class="section-pretitle">&#9679; LIVE MODEL PREDICTIONS</div>
+            <h2 class="section-title" style="margin-bottom: 0;">Matchweek 29 Key Matchups</h2>
+          </div>
+          <div style="background: rgba(255, 255, 255, 0.06); padding: 8px 16px; border-radius: 6px; font-size: 12px; font-weight: 800;">
+            AGGREGATE CONFIDENCE: <span style="color: var(--accent-neon-green);">92.4%</span>
+          </div>
+        </div>
+
+        <div class="matchups-grid" id="homeMatchupsGrid">
+          <!-- Dynamically populated from /api/home -->
+        </div>
+      </section>
+
+      <!-- Data Ingestion Pipelines -->
+      <section class="pipeline-section-card">
+        <div>
+          <div class="section-pretitle">ENGINEERING RIGOR</div>
+          <h2 style="font-size: 32px; font-weight: 900; margin-bottom: 16px;">
+            Built on Opta, Football-Data.org &amp; Transfermarkt pipelines.
+          </h2>
+          <p style="font-size: 14px; line-height: 1.6; color: #555066; margin-bottom: 24px;">
+            Predictive fidelity is only as robust as the raw signal. Our ingestion cluster processes 2,400+ distinct pitch coordinates per fixture, executing feature transformation pipelines instantly post-whistle.
+          </p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div>
+              <div style="font-weight: 900; font-size: 14px; margin-bottom: 4px;">&#9745; Instant Rescoring</div>
+              <div style="font-size: 12px; color: #7b758c;">Fixtures auto-retrain downstream model weightings within 4 minutes of match conclusion.</div>
+            </div>
+            <div>
+              <div style="font-weight: 900; font-size: 14px; margin-bottom: 4px;">&#9782; Quant Model Transparency</div>
+              <div style="font-size: 12px; color: #7b758c;">SHAP explanations and permutation importances published across every fixture calculation.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pipeline-table">
+          <div style="font-size: 11px; font-weight: 800; letter-spacing: 1px; color: #7b758c; margin-bottom: 12px;">
+            DATA INGESTION HEALTH
+          </div>
+          <div class="pipeline-row">
+            <span>&#9679; Opta Event Stream</span>
+            <span style="color: #009655;">Sub-second Live</span>
+          </div>
+          <div class="pipeline-row">
+            <span>&#9679; Transfermarkt API Sync</span>
+            <span style="color: #7b758c;">Hourly Differential</span>
+          </div>
+          <div class="pipeline-row">
+            <span>&#9679; Football-Data.org Schema</span>
+            <span style="color: #7928ca;">Realtime Webhook</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; font-weight: 800; margin-top: 16px;">
+            <span>Pipeline Uptime (30d)</span>
+            <span style="color: #110d1c;">99.98%</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+
+    <!-- ====================================================================
+         VIEW 2: MATCH PREDICTOR
+         ==================================================================== -->
+    <div id="view-match" class="app-view">
+      
+      <div class="predictor-header-row">
+        <div>
+          <div class="section-pretitle">NINETY+ &bull; MATCH OUTCOME PREDICTOR &bull; LIVE SIMULATION</div>
+          <h1 class="hero-main-title" style="font-size: 42px; margin-bottom: 8px;">PREMIER LEAGUE MATCH PREDICTOR</h1>
+          <p style="font-size: 14px; color: var(--text-muted-dark); max-width: 680px;">
+            Probabilistic match simulation engine powered by gradient boosted decision trees trained on 10 seasons of EPL pre-match metrics, pitch conditions, and dynamic tactical delta models.
+          </p>
+        </div>
+        <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 12px 18px; font-size: 12px;">
+          <div style="color: var(--accent-neon-green); font-weight: 800;">&#9679; SYNC TELEMETRY</div>
+          <div style="font-weight: 900; margin: 4px 0;">Football-data.org API</div>
+          <div style="font-size: 11px; color: var(--text-muted-dark);">Updated 42 mins ago</div>
+        </div>
+      </div>
+
+      <!-- Controls Bar -->
+      <div class="sim-controls-bar">
+        <div class="sim-select-group">
+          <div class="sim-field">
+            <label>HOME CLUB (HOST)</label>
+            <select id="homeTeamSelect"></select>
+          </div>
+          <span style="font-weight: 900; color: #7b758c; margin-top: 14px;">VS</span>
+          <div class="sim-field">
+            <label>AWAY CLUB (VISITOR)</label>
+            <select id="awayTeamSelect"></select>
+          </div>
+          <div class="sim-field">
+            <label>FIXTURE WINDOW</label>
+            <input type="text" value="MW 29 • 16 Mar 2025" readonly />
+          </div>
+        </div>
+
+        <button class="btn-simulate" id="simulateBtn" onclick="runMatchSimulation()">
+          <span>&#9889;</span> Simulate
+        </button>
+      </div>
+
+      <!-- Live Simulation Meta Banner -->
+      <div style="background: #06020e; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 8px 16px; display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 20px;">
+        <span style="color: var(--accent-neon-green); font-weight: 800;">&#9679; ML PROJECTION ALPHA: 10,000 MONTE CARLO ITERATIONS COMPLETED</span>
+        <span style="color: var(--text-muted-dark);">Simulation ID: #PL-2425-2904 &bull; <strong style="color: #fff;">High Convergence</strong></span>
+      </div>
+
+      <!-- Big Projection Card -->
+      <div class="projection-hero-card">
+        <div class="teams-clash-row">
+          <!-- Home Team -->
+          <div class="team-badge-box">
+            <div class="team-crest-sq" id="predHomeCrest">AFC</div>
+            <div>
+              <div style="font-size: 11px; font-weight: 800; color: #7b758c;">TABLE RANK 1ST &bull; HOST</div>
+              <div class="team-info-name" id="predHomeName">Arsenal FC</div>
+              <div class="team-info-sub">Projected xG: <strong style="color: #110d1c; font-size: 16px;" id="predHomeXg">2.14</strong></div>
+            </div>
+          </div>
+
+          <!-- Center Probabilities -->
+          <div>
+            <div class="center-probabilities-box">
+              <div class="prob-col">
+                <div class="prob-title">HOME WIN</div>
+                <div class="prob-pct green" id="predHomeProb">70%</div>
+              </div>
+              <div class="prob-col">
+                <div class="prob-title">DRAW</div>
+                <div class="prob-pct purple" id="predDrawProb">20%</div>
+              </div>
+              <div class="prob-col">
+                <div class="prob-title">AWAY WIN</div>
+                <div class="prob-pct pink" id="predAwayProb">10%</div>
+              </div>
+            </div>
+
+            <!-- Stacked Probability Bar -->
+            <div style="height: 10px; background: #e0dced; border-radius: 5px; display: flex; overflow: hidden; margin: 16px 0 8px;">
+              <div id="predBarHome" style="width: 70%; background: #00ff85;"></div>
+              <div id="predBarDraw" style="width: 20%; background: #220845;"></div>
+              <div id="predBarAway" style="width: 10%; background: #ff2a85;"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 11px; color: #7b758c; font-weight: 700;">
+              <span>Model Confidence: 94.8%</span>
+              <span>Poisson-Decay Distribution Fit</span>
+            </div>
+          </div>
+
+          <!-- Away Team -->
+          <div class="team-badge-box" style="justify-content: flex-end; text-align: right;">
+            <div>
+              <div style="font-size: 11px; font-weight: 800; color: #7b758c;">TABLE RANK 8TH &bull; VISITOR</div>
+              <div class="team-info-name" id="predAwayName">Chelsea FC</div>
+              <div class="team-info-sub">Projected xG: <strong style="color: #110d1c; font-size: 16px;" id="predAwayXg">0.82</strong></div>
+            </div>
+            <div class="team-crest-sq away" id="predAwayCrest">CFC</div>
+          </div>
+        </div>
+
+        <!-- Fair Odds Arbitrage Strip -->
+        <div style="background: #f7f6fb; border-radius: 8px; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; font-size: 13px;">
+          <div>
+            <strong style="color: #110d1c;">FAIR ODDS ARBITRAGE:</strong> Model: <strong>1.43</strong> vs Market: <strong>1.55</strong>
+          </div>
+          <span style="background: #00ff85; color: #000; font-weight: 900; font-size: 11px; padding: 4px 12px; border-radius: 4px;">
+            +8.4% ALPHA EDGE IDENTIFIED
+          </span>
+        </div>
+      </div>
+
+      <!-- Tactical Split Grid -->
+      <div class="tactical-split-grid">
+        <!-- Left: Team Comparative -->
+        <div class="tactical-white-card">
+          <div style="font-size: 11px; font-weight: 800; color: #7b758c; margin-bottom: 4px;">TACTICAL MATCHUP BREAKDOWN</div>
+          <h3 style="font-size: 22px; font-weight: 900; margin-bottom: 20px;">Pre-Match Team Comparative</h3>
+
+          <!-- Form Comparison -->
+          <div style="margin-bottom: 18px;">
+            <div style="display: flex; justify-content: space-between; font-size: 12px; font-weight: 800; margin-bottom: 8px;">
+              <span>Home Form (<span id="predHomePts">13/15 pts</span>)</span>
+              <span>Away Form (<span id="predAwayPts">7/15 pts</span>)</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div class="form-pills-row" id="predHomeForm"></div>
+              <span style="font-size: 10px; font-weight: 800; color: #7b758c;">RECENT MOMENTUM</span>
+              <div class="form-pills-row" id="predAwayForm"></div>
+            </div>
+          </div>
+
+          <!-- Stats Bars -->
+          <div style="margin-bottom: 16px;">
+            <div style="display: flex; justify-content: space-between; font-size: 12px; font-weight: 800; margin-bottom: 4px;">
+              <span>1st (64 pts)</span>
+              <span style="color: #7b758c;">LEAGUE RANK &amp; POINTS</span>
+              <span>8th (42 pts)</span>
+            </div>
+            <div style="height: 6px; background: #e0dced; border-radius: 3px; display: flex; overflow: hidden;">
+              <div style="width: 60%; background: #220845;"></div>
+              <div style="width: 40%; background: #7b758c;"></div>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 16px;">
+            <div style="display: flex; justify-content: space-between; font-size: 12px; font-weight: 800; margin-bottom: 4px;">
+              <span>2.28</span>
+              <span style="color: #7b758c;">GOALS SCORED / 90</span>
+              <span>1.62</span>
+            </div>
+            <div style="height: 6px; background: #e0dced; border-radius: 3px; display: flex; overflow: hidden;">
+              <div style="width: 65%; background: #220845;"></div>
+              <div style="width: 35%; background: #ff2a85;"></div>
+            </div>
+          </div>
+
+          <div style="background: #fdf2f7; border-radius: 8px; padding: 14px; margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <div style="font-weight: 900; font-size: 13px;">Emirates Stadium Factor</div>
+              <div style="font-size: 11px; color: #7b758c;">Arsenal have won 11 of their last 12 home league fixtures.</div>
+            </div>
+            <div style="text-align: right;">
+              <div style="font-size: 10px; font-weight: 800; color: #7b758c;">HOME INDEX</div>
+              <div style="font-size: 18px; font-weight: 900; color: #220845;">9.6 / 10</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: SHAP Feature Importance -->
+        <div class="tactical-dark-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
+            <div>
+              <div style="color: var(--accent-neon-green); font-size: 11px; font-weight: 800;">&#9679; SHAP VALUE ATTRIBUTION</div>
+              <h3 style="font-size: 20px; font-weight: 900;">Feature Importance</h3>
+            </div>
+            <span style="font-size: 11px; color: var(--text-muted-dark);">Top 5 Drivers</span>
+          </div>
+
+          <div id="shapDriversContainer">
+            <!-- Populated from API -->
+          </div>
+
+          <div style="background: rgba(0,0,0,0.3); border-radius: 6px; padding: 10px 14px; margin-top: 16px; display: flex; justify-content: space-between; font-size: 11px;">
+            <span>Decision Tree Depth: 12 Layers</span>
+            <span style="color: var(--accent-neon-green); font-weight: 800;">Optimal Fit</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projected Key Duels -->
+      <div class="tactical-white-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+          <div>
+            <div style="font-size: 11px; font-weight: 800; color: #7b758c;">TACTICAL GEOMETRY</div>
+            <h3 style="font-size: 22px; font-weight: 900;">Projected Key Duels &amp; Heat Zones</h3>
+          </div>
+          <div style="display: flex; gap: 10px; font-size: 11px; font-weight: 800;">
+            <span style="background: rgba(0,255,133,0.15); color: #009655; padding: 4px 10px; border-radius: 4px;">Home Press Zone: High (42%)</span>
+            <span style="background: rgba(255,42,133,0.15); color: #ff2a85; padding: 4px 10px; border-radius: 4px;">Away Vulnerability: Left Half-Space</span>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1.2fr 1fr; gap: 24px; align-items: center;">
+          <div style="background: #fbfbfe; border: 1px solid #eae8f2; border-radius: 10px; padding: 18px;">
+            <div style="font-size: 11px; font-weight: 800; color: #7b758c;">ARSENAL KEY ANCHOR</div>
+            <div style="font-size: 18px; font-weight: 900; margin: 4px 0;" id="duelHomeName">Bukayo Saka</div>
+            <div style="font-size: 12px; color: #7b758c;" id="duelHomeRole">Right Wing • Rating 8.94</div>
+            <div style="display: flex; justify-content: space-between; margin-top: 14px; font-size: 12px;">
+              <div><strong>0.68</strong><div style="color: #7b758c; font-size: 10px;">xG+xA/90</div></div>
+              <div><strong>4.1</strong><div style="color: #7b758c; font-size: 10px;">Take-ons/90</div></div>
+              <div><strong>92%</strong><div style="color: #7b758c; font-size: 10px;">Pass Acc.</div></div>
+            </div>
+          </div>
+
+          <!-- Mini Pitch Graphic -->
+          <div style="height: 120px; background: #160a2b; border-radius: 8px; display: flex; align-items: center; justify-content: space-around; color: #fff; font-size: 11px; font-weight: 800; padding: 10px;">
+            <span style="background: rgba(0,255,133,0.25); border: 1px solid var(--accent-neon-green); color: var(--accent-neon-green); padding: 4px 8px; border-radius: 4px;">HIGH PRESS ZONE</span>
+            <span style="background: rgba(255,42,133,0.25); border: 1px solid var(--accent-pink); color: var(--accent-pink); padding: 4px 8px; border-radius: 4px;">DEFENSIVE BLOCK</span>
+          </div>
+
+          <div style="background: #fbfbfe; border: 1px solid #eae8f2; border-radius: 10px; padding: 18px;">
+            <div style="font-size: 11px; font-weight: 800; color: #7b758c;">CHELSEA KEY ANCHOR</div>
+            <div style="font-size: 18px; font-weight: 900; margin: 4px 0;" id="duelAwayName">Cole Palmer</div>
+            <div style="font-size: 12px; color: #7b758c;" id="duelAwayRole">Attacking Mid • Rating 7.82</div>
+            <div style="display: flex; justify-content: space-between; margin-top: 14px; font-size: 12px;">
+              <div><strong>0.54</strong><div style="color: #7b758c; font-size: 10px;">xG+xA/90</div></div>
+              <div><strong>2.8</strong><div style="color: #7b758c; font-size: 10px;">Key Passes</div></div>
+              <div><strong>28%</strong><div style="color: #7b758c; font-size: 10px;">Press Success</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- ====================================================================
+         VIEW 3: TRANSFER VALUE PREDICTOR
+         ==================================================================== -->
+    <div id="view-transfer" class="app-view">
+      
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+        <div>
+          <div class="section-pretitle">INTEL HUB &bull; TRANSFER VALUE PREDICTOR</div>
+          <h1 class="hero-main-title" style="font-size: 38px; margin-bottom: 4px;">PLAYER MARKET VALUE ESTIMATOR</h1>
+        </div>
+
+        <div style="display: flex; gap: 12px;">
+          <input type="text" id="tvSearchInput" placeholder="Search player (e.g. Bukayo Saka)..." style="padding: 10px 16px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); background: #160a2b; color: #fff; font-size: 13px; outline: none;" />
+          <button class="btn-primary-gradient" onclick="searchTransferPlayer()">Analyze</button>
+        </div>
+      </div>
+
+      <!-- Top Split Hero -->
+      <div class="transfer-top-grid">
+        <!-- Left: Portrait Hero -->
+        <div class="player-portrait-card">
+          <div class="portrait-header">
+            <span>PREMIER LEAGUE &bull; #8</span>
+            <span style="background: rgba(0,255,133,0.1); padding: 4px 8px; border-radius: 4px;">&#9889; 9.42 ML INDEX</span>
+          </div>
+
+          <div style="text-align: center;">
+            <div class="portrait-avatar-huge" style="margin: 20px auto;">&#9917;</div>
+            <div style="font-size: 12px; font-weight: 800; color: var(--accent-neon-green);" id="tvPlayerSub">AM &bull; Manchester United FC</div>
+            <div style="font-size: 34px; font-weight: 900; line-height: 1.1; margin-top: 4px;" id="tvPlayerName">Bruno Fernandes</div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px; margin-top: 20px;">
+            <div>
+              <div style="font-size: 10px; color: var(--text-muted-dark); font-weight: 800;">AGE</div>
+              <div style="font-size: 16px; font-weight: 900;" id="tvPlayerAge">30 yrs</div>
+            </div>
+            <div>
+              <div style="font-size: 10px; color: var(--text-muted-dark); font-weight: 800;">CONTRACT</div>
+              <div style="font-size: 16px; font-weight: 900;" id="tvPlayerContract">Jun 2027</div>
+            </div>
+            <div>
+              <div style="font-size: 10px; color: var(--text-muted-dark); font-weight: 800;">SEASON MINS</div>
+              <div style="font-size: 16px; font-weight: 900;" id="tvPlayerMins">2,480'</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Valuation Breakdown -->
+        <div class="valuation-metrics-card">
+          <div>
+            <div style="display: flex; justify-content: space-between; font-size: 11px; font-weight: 800; color: #7b758c; margin-bottom: 16px;">
+              <span>&#9881; XGBOOST &amp; RIDGE VALUATION ENSEMBLE V2.4</span>
+              <span>Target Value Delta: <strong style="color: #009655;">+&euro;11.4M</strong></span>
+            </div>
+
+            <div class="val-main-figures">
+              <div>
+                <div style="font-size: 11px; font-weight: 800; color: #7b758c;">ML PREDICTED VALUE</div>
+                <div class="val-big-num" id="tvPredictedVal">&euro;72.4M</div>
+                <div class="val-badge-undervalued" id="tvDeltaBadge">+18.7% Undervalued vs Listed</div>
+              </div>
+
+              <div style="text-align: right;">
+                <div style="font-size: 11px; font-weight: 800; color: #7b758c;">CURRENT MARKET VALUE (TM)</div>
+                <div style="font-size: 36px; font-weight: 900; color: #555066;" id="tvActualVal">&euro;61.0M</div>
+                <div style="font-size: 11px; color: #7b758c;">Last reviewed: Feb 2025 &bull; Prorated</div>
+              </div>
+            </div>
+
+            <!-- Confidence Interval -->
+            <div class="ci-slider-container">
+              <div style="display: flex; justify-content: space-between; font-size: 11px; font-weight: 800; color: #7b758c;">
+                <span>ALGORITHMIC CONFIDENCE INTERVAL (90% CI)</span>
+                <span style="color: #009655;">High Confidence &bull; Sample: 2,480 mins</span>
+              </div>
+              <div class="ci-bar-bg"></div>
+              <div style="display: flex; justify-content: space-between; font-size: 11px; color: #7b758c; margin-top: 6px;">
+                <span id="tvCiLow">Low: &euro;60.0M</span>
+                <span style="font-weight: 900; color: #110d1c;" id="tvCiOpt">Optimal Point: &euro;72.4M</span>
+                <span id="tvCiHigh">High: &euro;84.0M</span>
+              </div>
+            </div>
+
+            <!-- Factors -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 24px; font-size: 12px;">
+              <div style="background: #fbfbfe; border-radius: 6px; padding: 10px;">
+                <div style="font-size: 10px; color: #7b758c; font-weight: 800;">CONTRACT EXPIRY</div>
+                <div style="font-weight: 900; color: #009655;" id="tvContractImpact">+&euro;8.4M</div>
+                <div style="font-size: 10px; color: #7b758c;">Through 2027</div>
+              </div>
+              <div style="background: #fbfbfe; border-radius: 6px; padding: 10px;">
+                <div style="font-size: 10px; color: #7b758c; font-weight: 800;">FORM PREMIUM</div>
+                <div style="font-weight: 900; color: #009655;" id="tvFormPremium">+&euro;14.2M</div>
+                <div style="font-size: 10px; color: #7b758c;">Top 1% Chance Creation</div>
+              </div>
+              <div style="background: #fbfbfe; border-radius: 6px; padding: 10px;">
+                <div style="font-size: 10px; color: #7b758c; font-weight: 800;">COMMERCIAL FACTOR</div>
+                <div style="font-weight: 900;" id="tvCommercialFactor">9.4 / 10</div>
+                <div style="font-size: 10px; color: #7b758c;">Captain &amp; Global Brand</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 12px; margin-top: 24px;">
+            <button class="btn-primary-gradient" onclick="exportValuationDossier()" style="background: #110d1c; font-size: 13px;">
+              &#128196; Export Valuation Dossier
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Percentiles & Model Comparison Split -->
+      <div class="percentiles-grid">
+        <!-- Left: Per 90 Percentiles -->
+        <div class="tactical-white-card">
+          <div style="font-size: 11px; font-weight: 800; color: #7b758c; margin-bottom: 4px;">PRODUCTION MATRIX</div>
+          <h3 style="font-size: 22px; font-weight: 900; margin-bottom: 20px;">2024/25 Per 90 Metrics &amp; Percentiles</h3>
+
+          <div id="tvPercentilesContainer">
+            <!-- Populated from API -->
+          </div>
+
+          <div style="background: #fdf2f7; border-radius: 8px; padding: 16px; margin-top: 20px; display: flex; align-items: center; gap: 16px;">
+            <div style="font-size: 28px; color: var(--accent-pink);">&#9670;</div>
+            <div>
+              <div style="font-size: 13px; font-weight: 900;">Elite High-Volume Playmaker &amp; Engine</div>
+              <div style="font-size: 11px; color: #7b758c;">Matches profile blueprint of peak Kevin De Bruyne (2020) &amp; Cesc F&agrave;bregas.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Model Comparison -->
+        <div class="tactical-white-card">
+          <div style="font-size: 11px; font-weight: 800; color: #7b758c; margin-bottom: 4px;">ALGORITHM BREAKDOWN</div>
+          <h3 style="font-size: 22px; font-weight: 900; margin-bottom: 20px;">Valuation Model Comparison</h3>
+
+          <div id="tvModelComparisonList">
+            <!-- Populated from API -->
+          </div>
+
+          <div style="background: #faf9fd; border-radius: 6px; padding: 12px; margin-top: 20px; display: flex; justify-content: space-between; font-size: 12px; font-weight: 800;">
+            <span>Mean Absolute Error (MAE): &plusmn;&euro;4.2M</span>
+            <span style="color: #7928ca;">Ensemble R&sup2; = 0.942</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- ====================================================================
+         VIEW 4: PLAYER SCOUTING
+         ==================================================================== -->
+    <div id="view-scouting" class="app-view">
+      
+      <div style="margin-bottom: 20px;">
+        <div class="section-pretitle">MODULE: ML-CLS-09 &bull; K-MEANS &bull; UMAP DIMENSIONALITY &bull; COSINE VECTOR</div>
+        <h1 class="hero-main-title" style="font-size: 40px; margin-bottom: 6px;">PLAYER SCOUTING &amp; SIMILARITY ENGINE</h1>
+        <p style="font-size: 14px; color: var(--text-muted-dark);">
+          Find tactical clones and statistical twins across the Premier League using multi-dimensional player embeddings and 72-metric Euclidean spatial vectors.
+        </p>
+      </div>
+
+      <!-- Search & Filters -->
+      <div class="scouting-search-bar">
+        <div style="display: flex; align-items: center; gap: 14px; flex: 1;">
+          <span style="font-size: 12px; font-weight: 800; color: #7b758c;">BASELINE TARGET:</span>
+          <input type="text" id="scoutSearchInput" value="Bruno Fernandes" style="padding: 8px 16px; border-radius: 6px; border: 1px solid #d9d6e3; font-size: 13px; font-weight: 700; width: 280px;" />
+          <button class="btn-primary-gradient" onclick="searchScoutingPlayer()" style="padding: 8px 18px; font-size: 12px; background: #220845;">Find Twins</button>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="font-size: 12px; font-weight: 800; color: #7b758c;">POSITIONAL FILTER:</span>
+          <div class="position-filter-tabs">
+            <button class="pos-tab-btn active" onclick="filterScoutingPosition(this, 'ALL')">ALL</button>
+            <button class="pos-tab-btn" onclick="filterScoutingPosition(this, 'Goalkeeper')">GK</button>
+            <button class="pos-tab-btn" onclick="filterScoutingPosition(this, 'Defender')">DEF</button>
+            <button class="pos-tab-btn" onclick="filterScoutingPosition(this, 'Midfield')">MID</button>
+            <button class="pos-tab-btn" onclick="filterScoutingPosition(this, 'Attack')">ATT</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Anchor Vector Card -->
+      <div class="anchor-hero-card">
+        <div class="anchor-left">
+          <div class="anchor-avatar">&#128100;</div>
+          <div>
+            <div style="font-size: 11px; font-weight: 800; color: var(--accent-neon-green);">ANCHOR VECTOR &bull; EPL 24/25</div>
+            <div style="font-size: 26px; font-weight: 900;" id="anchorPlayerName">Bruno Fernandes</div>
+            <div style="font-size: 12px; color: var(--text-muted-dark);" id="anchorPlayerClub">Manchester United FC &bull; Midfield</div>
+          </div>
+        </div>
+
+        <div class="anchor-metrics-grid">
+          <div class="anchor-metric-cell">
+            <div class="val" id="anchorKp90">3.24</div>
+            <div class="lbl">KEY PASSES / 90</div>
+          </div>
+          <div class="anchor-metric-cell">
+            <div class="val" id="anchorXa90">0.42</div>
+            <div class="lbl">EXPECTED ASSISTS (XA)</div>
+          </div>
+          <div class="anchor-metric-cell">
+            <div class="val" id="anchorProgPasses">7.45</div>
+            <div class="lbl">PROG PASSES / 90</div>
+          </div>
+          <div class="anchor-metric-cell">
+            <div class="val" id="anchorMarketEst">&euro;61.0M</div>
+            <div class="lbl">MARKET EST.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cluster Map & Twins Split -->
+      <div class="scouting-split-grid">
+        <!-- 2D Tactical Cluster Map -->
+        <div class="cluster-map-card">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <div style="font-size: 10px; font-weight: 800; color: #7b758c;">2D EMBEDDING PROJECTION</div>
+              <h3 style="font-size: 18px; font-weight: 900;">Tactical Cluster Map</h3>
+            </div>
+            <span style="font-size: 11px; color: #7b758c;">UMAP Iterations: 1,500</span>
+          </div>
+
+          <canvas id="clusterCanvas"></canvas>
+
+          <div style="display: flex; justify-content: space-around; font-size: 11px; font-weight: 800; color: #7b758c;">
+            <span style="color: #7928ca;">&#9679; Elite Inside Forwards</span>
+            <span style="color: #00ff85;">&#9679; Transition Wingers</span>
+            <span style="color: #0070f3;">&#9679; Creative Playmakers</span>
+            <span style="color: #ff2a85;">&#9679; Box Poachers</span>
+          </div>
+        </div>
+
+        <!-- Ranked Statistical Twins -->
+        <div class="twins-table-card">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <div style="font-size: 10px; font-weight: 800; color: #009655;">CONFIDENCE: 96.8% &bull; Cosine Distance Ranking</div>
+              <h3 style="font-size: 18px; font-weight: 900;">Ranked Statistical Twins</h3>
+            </div>
+            <span style="font-size: 11px; color: #7b758c;">&uarr;&darr; SORT: MATCH %</span>
+          </div>
+
+          <table class="twins-table">
+            <thead>
+              <tr>
+                <th>RANK</th>
+                <th>PLAYER PROFILE</th>
+                <th>POS</th>
+                <th>AGE</th>
+                <th>SIMILARITY</th>
+                <th>KP/90</th>
+                <th>A/90</th>
+                <th>VALUE</th>
+              </tr>
+            </thead>
+            <tbody id="twinsTableBody">
+              <!-- Populated from API -->
+            </tbody>
+          </table>
+
+          <div style="margin-top: 20px; padding-top: 14px; border-top: 1px solid #eeecf4; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 12px; color: #7b758c;">Showing Top 5 tracked Premier League twins</span>
+            <button class="btn-primary-gradient" onclick="exportScoutDossier()" style="padding: 8px 18px; font-size: 12px; background: #00ff85; color: #000;">
+              &#128190; Export CSV Dossier
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Head to Head Dimensions -->
+      <div class="tactical-white-card">
+        <div style="font-size: 11px; font-weight: 800; color: #7b758c; margin-bottom: 4px;">TACTICAL FINGERPRINT ALIGNMENT</div>
+        <h3 style="font-size: 20px; font-weight: 900; margin-bottom: 16px;">
+          Head-to-Head Embedding Dimensions (Baseline Anchor vs #1 Twin)
+        </h3>
+
+        <div id="h2hDimensionsContainer">
+          <!-- Populated from API -->
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- ====================================================================
+         VIEW 5: DATA & METHODOLOGY
+         ==================================================================== -->
+    <div id="view-methodology" class="app-view">
+      
+      <div class="section-pretitle">DATA PROVENANCE &bull; ML ARCHITECTURE</div>
+      <h1 class="hero-main-title">DATA &amp; METHODOLOGY</h1>
+      <p class="hero-desc">
+        Full technical documentation of the data layer, leak-free training pipelines, point-in-time joins, and calibration benchmarks.
+      </p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 32px;">
+        <div class="tactical-white-card">
+          <h3 style="font-size: 20px; font-weight: 900; margin-bottom: 12px;">Leakage Prevention System</h3>
+          <p style="font-size: 13px; line-height: 1.6; color: #555066; margin-bottom: 16px;">
+            Every single feature calculation strictly executes point-in-time joins with zero forward-looking leakage:
+          </p>
+          <ul style="padding-left: 20px; font-size: 13px; color: #555066; line-height: 1.8;">
+            <li><strong>Module 1:</strong> Uses <code>player_valuations.date &le; match_date</code>. No future season stats bleed into market estimates.</li>
+            <li><strong>Module 2:</strong> Uses <code>game_date &lt; fixture_date</code>. Rolling metrics, Elo, and rest days are calculated strictly on completed pre-match history.</li>
+            <li><strong>Module 3:</strong> Unsupervised embeddings and K-Means segmentation isolate 2D representations from weighted Euclidean distances.</li>
+          </ul>
+        </div>
+
+        <div class="tactical-white-card">
+          <h3 style="font-size: 20px; font-weight: 900; margin-bottom: 12px;">Data Layer &amp; Sync</h3>
+          <p style="font-size: 13px; line-height: 1.6; color: #555066; margin-bottom: 16px;">
+            Hybrid architecture ensuring reliable offline execution with automated fallback:
+          </p>
+          <ul style="padding-left: 20px; font-size: 13px; color: #555066; line-height: 1.8;">
+            <li><strong>Transfermarkt Datasets:</strong> 8 core tables downloaded from Cloudflare R2 and cached in <code>data/raw/</code>.</li>
+            <li><strong>Football-Data.org Client:</strong> Cached fixture feed with offline synthetic schedule fallback.</li>
+            <li><strong>Squad Overrides:</strong> Real-time mapping resolving recent summer and winter transfers.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Broadcast Footer -->
+  <footer class="app-footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-title">NINETY+</div>
+        <p style="font-size: 12px; line-height: 1.6; max-width: 320px;">
+          Elite Premier League football intelligence platform marrying broadcast visuals with predictive machine learning algorithms.
+        </p>
+      </div>
+
+      <div>
+        <div class="footer-col-title">PREDICTIVE MODELS</div>
+        <ul class="footer-links-list">
+          <li><a href="#" onclick="switchView('match')">Match Outcome Predictor (xG/Elo)</a></li>
+          <li><a href="#" onclick="switchView('transfer')">Transfer Value Estimator v2.4</a></li>
+          <li><a href="#" onclick="switchView('scouting')">Scouting Clustering Engine</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">DATA SOURCES &amp; INTEGRITY</div>
+        <ul class="footer-links-list">
+          <li><a href="#">Opta Event Stream Feeds</a></li>
+          <li><a href="#">Transfermarkt Historical</a></li>
+          <li><a href="#">Football-data.org Fixtures</a></li>
+          <li><a href="#" onclick="switchView('methodology')" style="color: var(--accent-neon-green); font-weight: 800;">View Full Methodology &rarr;</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">MODEL OUTPUT DISCLAIMER</div>
+        <div class="footer-disclaimer-box">
+          Predictions are machine learning probabilistic outputs based on historical match &amp; player data and should not be treated as financial advice or sports betting guarantees.
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <span>&copy; 2025 Ninety+ Analytics. All Premier League data rights acknowledged.</span>
+      <span style="color: var(--accent-neon-green); font-weight: 800;">&#9679; All ML Engines Operational</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

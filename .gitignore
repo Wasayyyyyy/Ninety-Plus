@@ -1,0 +1,23 @@
+# Python virtual environment
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# Environment secrets
+.env
+
+# Raw data tables (large datasets & caches)
+data/raw/*.csv.gz
+data/raw/*.csv
+!data/raw/squad_overrides.csv
+data/raw/football_data_cache/
+
+# Processed artifacts that can be regenerated
+*.log
+.pytest_cache/

@@ -1,0 +1,177 @@
+{
+  "test_season": 2024,
+  "train_samples": 4560,
+  "test_samples": 380,
+  "majority_baseline": {
+    "model": "Majority Class Baseline",
+    "accuracy": 0.40789473684210525,
+    "log_loss": 1.0814502147948386,
+    "brier_score": 0.6560131001846722,
+    "per_class": {
+      "HOME_WIN": {
+        "precision": 0.40789473684210525,
+        "recall": 1.0,
+        "f1": 0.5794392523364486,
+        "support": 155
+      },
+      "DRAW": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 93
+      },
+      "AWAY_WIN": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 132
+      }
+    },
+    "confusion_matrix": [
+      [
+        155,
+        0,
+        0
+      ],
+      [
+        93,
+        0,
+        0
+      ],
+      [
+        132,
+        0,
+        0
+      ]
+    ]
+  },
+  "heuristic_baseline": {
+    "model": "Points Heuristic Baseline",
+    "accuracy": 0.5236842105263158,
+    "log_loss": 1.023778655060298,
+    "brier_score": 0.6134042105263158,
+    "per_class": {
+      "HOME_WIN": {
+        "precision": 0.5,
+        "recall": 0.8774193548387097,
+        "f1": 0.6370023419203747,
+        "support": 155
+      },
+      "DRAW": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 93
+      },
+      "AWAY_WIN": {
+        "precision": 0.5833333333333334,
+        "recall": 0.4772727272727273,
+        "f1": 0.525,
+        "support": 132
+      }
+    },
+    "confusion_matrix": [
+      [
+        136,
+        0,
+        19
+      ],
+      [
+        67,
+        0,
+        26
+      ],
+      [
+        69,
+        0,
+        63
+      ]
+    ]
+  },
+  "random_forest": {
+    "model": "Random Forest",
+    "accuracy": 0.45789473684210524,
+    "log_loss": 1.0343364034137752,
+    "brier_score": 0.6210154863283868,
+    "per_class": {
+      "HOME_WIN": {
+        "precision": 0.5279503105590062,
+        "recall": 0.5483870967741935,
+        "f1": 0.5379746835443038,
+        "support": 155
+      },
+      "DRAW": {
+        "precision": 0.21333333333333335,
+        "recall": 0.17204301075268819,
+        "f1": 0.19047619047619047,
+        "support": 93
+      },
+      "AWAY_WIN": {
+        "precision": 0.5069444444444444,
+        "recall": 0.553030303030303,
+        "f1": 0.5289855072463768,
+        "support": 132
+      }
+    },
+    "confusion_matrix": [
+      [
+        85,
+        34,
+        36
+      ],
+      [
+        42,
+        16,
+        35
+      ],
+      [
+        34,
+        25,
+        73
+      ]
+    ]
+  },
+  "xgboost": {
+    "model": "XGBoost",
+    "accuracy": 0.4394736842105263,
+    "log_loss": 1.0443933010101318,
+    "brier_score": 0.6283309135808731,
+    "per_class": {
+      "HOME_WIN": {
+        "precision": 0.5151515151515151,
+        "recall": 0.5483870967741935,
+        "f1": 0.53125,
+        "support": 155
+      },
+      "DRAW": {
+        "precision": 0.20481927710843373,
+        "recall": 0.1827956989247312,
+        "f1": 0.19318181818181818,
+        "support": 93
+      },
+      "AWAY_WIN": {
+        "precision": 0.49242424242424243,
+        "recall": 0.49242424242424243,
+        "f1": 0.49242424242424243,
+        "support": 132
+      }
+    },
+    "confusion_matrix": [
+      [
+        85,
+        38,
+        32
+      ],
+      [
+        41,
+        17,
+        35
+      ],
+      [
+        39,
+        28,
+        65
+      ]
+    ]
+  }
+}
