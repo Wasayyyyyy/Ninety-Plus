@@ -1,0 +1,7 @@
+# ── Development / local-only dependencies ──────────────────────────────────
+# Install with: pip install -r requirements-dev.txt
+-r requirements.txt
+
+streamlit==1.40.2        # scouting dashboard (local only)
+matplotlib==3.9.2        # training plots (local only)
+pytest==8.3.3            # test suite
